@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/AxiosGet/The-Worlds-TOP/static/css/main.dcee0d65.css",
+    "main.js": "/AxiosGet/The-Worlds-TOP/static/js/main.9440d836.js",
+    "static/js/787.a8710408.chunk.js": "/AxiosGet/The-Worlds-TOP/static/js/787.a8710408.chunk.js",
+    "static/media/bgg.jpg": "/AxiosGet/The-Worlds-TOP/static/media/bgg.877c7c613cefcf54dfeb.jpg",
+    "static/media/logo.svg": "/AxiosGet/The-Worlds-TOP/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/AxiosGet/The-Worlds-TOP/index.html",
+    "main.dcee0d65.css.map": "/AxiosGet/The-Worlds-TOP/static/css/main.dcee0d65.css.map",
+    "main.9440d836.js.map": "/AxiosGet/The-Worlds-TOP/static/js/main.9440d836.js.map",
+    "787.a8710408.chunk.js.map": "/AxiosGet/The-Worlds-TOP/static/js/787.a8710408.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dcee0d65.css",
+    "static/js/main.9440d836.js"
+  ]
+}
