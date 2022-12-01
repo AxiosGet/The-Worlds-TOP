@@ -38,9 +38,9 @@ const AllList = (props) => {
     },
 
     {
-      val: "SALARY",
+      val: "SALARIES",
       link: SALARY,
-      i: <i class="fa-solid fa-money-bill-wave"></i>,
+      i: <i className="fa-solid fa-money-bill-wave"></i>,
     },
   ];
 
@@ -90,9 +90,9 @@ const AllList = (props) => {
       setVisit(true);
       setSalary(false);
     } else if (link == SALARY) {
-      setHeading("SALARY");
+      setHeading("SALARIES");
       setSM("Discover the world's highest");
-      setIsActive("SALARY");
+      setIsActive("SALARIES");
       setVisit(false);
       setSalary(true);
     }
@@ -138,7 +138,7 @@ const AllList = (props) => {
               zIndex: "55",
             }}
           >
-            <span>{salary ? data.SALARY : data.TITLE}</span>
+            <span>{salary ? `$${data.SALARY}` : data.TITLE}</span>
           </div>
           <div
             className="desc"
@@ -173,7 +173,7 @@ const AllList = (props) => {
                     }, 1000)
               }
             >
-              <i class="fa-solid fa-paper-plane"></i>
+              <i className="fa-solid fa-paper-plane"></i>
             </div>
           )}
         </motion.div>
@@ -257,13 +257,8 @@ const AllList = (props) => {
                         >
                           <img src={data.IMAGE} />
                         </div>
-                        <div
-                          className="title"
-                          style={{
-                            zIndex: "55",
-                          }}
-                        >
-                          <span>{salary ? data.SALARY : data.TITLE}</span>
+                        <div className="title">
+                          <span>{salary ? `$${data.SALARY}` : data.TITLE}</span>
                         </div>
                         <div
                           className="desc"
@@ -302,7 +297,7 @@ const AllList = (props) => {
                                   }, 1000)
                             }
                           >
-                            <i class="fa-solid fa-paper-plane"></i>
+                            <i className="fa-solid fa-paper-plane"></i>
                           </div>
                         )}
                       </motion.div>
@@ -335,21 +330,31 @@ const AllList = (props) => {
               role="img"
               width="22"
               height="22"
-              class="sol-icon"
+              className="sol-icon"
             >
               <g id="icon-heart">
                 <path
                   id="Vector"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M3.54154 5.54154C5.59693 3.48615 8.92938 3.48615 10.9848 5.54154L12 6.55677L13.0152 5.54154C15.0706 3.48615 18.4031 3.48615 20.4585 5.54154C22.5138 7.59693 22.5138 10.9294 20.4585 12.9848L12.3536 21.0897C12.1583 21.2849 11.8417 21.2849 11.6464 21.0897L3.54154 12.9848C1.48615 10.9294 1.48615 7.59693 3.54154 5.54154Z"
                   fill=" #FF0000"
                 ></path>
               </g>
             </svg>
             &nbsp;by &nbsp;
-            <span class="sl-footer-links__marked-text">Bryan G</span>
-            <br />© 2022
+            <span className="sl-footer-links__marked-text">
+              Bryan G | © 2022
+            </span>
+            <br />
+            Invest in your future.
+            <br />
+            <button
+              className="button2"
+              onClick={() => (window.location.href = "/add")}
+            >
+              ADD DATA <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
         </>
       )}

@@ -10,6 +10,7 @@ body { background-color:#111111; }
  background-size: cover;
 }
 
+
 #id { margin: 0px; width: 100%; height:5px; background-color: transparent;}
 
 
@@ -48,7 +49,8 @@ justify-content: center;
 align-items: center;
 float: center;
 padding-top: 25px;
-height: 100px;
+padding-bottom: 25px;
+height: auto;
 width: 100%;
 background-color: #111111;}
 
@@ -97,13 +99,15 @@ background-color: #111111;}
 
 .container {
   margin: 10px;
-  height: auto;
+  height: 360px;
   cursor: pointer;
   border-radius: 12px;
   width: 300px;
-  background-color: #1e1e1f;
+  background-color: #19181a;
   font-family: "Poppins";
+  border: 3px solid transparent;
   padding: 10px;
+  overflow: hidden;
 }
 
 .forImg {
@@ -111,24 +115,24 @@ background-color: #111111;}
   height: 150px;
   width: 100%;
   margin-bottom: 10px;
+  border: none;
   border-radius: 10px;
   overflow: hidden;
   z-index: 1;
   position: relative;
-  box-shadow: 0px 0px 10px transparent;
   border: 2px solid transparent;
-  transition: .1s;
+  transition: .5s;
 }
 
 
 
 .forImg img {
-  border-radius: 10px;
   margin: 0px;
   height: 100%;
   width: 100%;
-  transition: .1s;
+  transition: .5s;
 }
+
 
 .title {
   position: relative;
@@ -141,25 +145,25 @@ background-color: #111111;}
   text-align: center;
   font-family: "Poppins";
   font-weight: 300;
-  color: white;
   letter-spacing: 1.5px;
   font-size:18px;
   margin-top: -30px;
   z-index: 55;
-  box-shadow: 0px 0px 10px transparent;
-  border: 2px solid transparent;
-  transition: .1s;
+  box-shadow: 0px 0px 5px transparent;
+  border: 3px solid transparent;
+  color: white; 
+  transition: .5s;
 }
 
-.container:hover .title {  box-shadow: 0px 0px 10px aqua;
-  border: 2px solid aqua;}
 
-.container:hover .forImg {  box-shadow: 0px 0px 10px aqua;
-  border: 2px solid aqua; }
+.container:hover .title {  background-color: black;   box-shadow: 0px 0px 10px aqua;
+  border: 3px solid aqua; margin-top: -20px;}
+  .container:hover .forImg  { overflow: visible;}
+  .container:hover .forImg img { transform: scale(1.2);}
+  .container:hover { box-shadow: 0px 0px 10px aqua; border: 3px solid aqua;}
 
-  .container:hover .forImg img { transform: scale(1.1);}
 
-.visit { float: right; margin-top: 10px; font-weight: 400;
+.visit { float: right; margin-top:0px; font-weight: 400;
   border-radius: 10px; border: 2px solid transparent;
 font-size: 15px; padding: 5px 10px; background-color:white; color: black;}
 
@@ -172,14 +176,14 @@ font-size: 15px; padding: 5px 10px; background-color:white; color: black;}
 .desc {
   margin: 10px auto;
   width: 100%;
-  border-radius: 10px;
   height: auto;
+  padding-bottom: 5px;
   float: left;
   text-align: left;
   font-family: "Poppins";
   font-weight: 300;
   color: #D3D3D3;
-  font-size: 15px;
+  font-size: 18px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -780,6 +784,173 @@ i { color: black}
   border-radius: 5px;
   cursor: pointer;}
 
+.Error404 {
+  position: absolute;
+  left: 50%;
+  top:30%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.Error404 h1 {
+  font-size: 150px;
+  font-weight: 600;
+}
+
+.Error404 p {
+  margin-top: -150px;
+}
+
+.addflex {
+margin: 50px auto;
+max-width: 800px;
+width: 90%;
+height: auto;}
+
+.countflex { margin: 0px;
+height: 100px;
+width: 100%;
+border-radius: 15px;
+border: 2px solid aqua;
+box-shadow: 0px 0px 5px aqua;
+background-color: #111111;
+display: flex;
+padding: 0px;
+justify-content: center;
+align-items: center;
+margin-bottom: 50px;}
+
+ .countcon { padding: 0px;
+ margin:0px auto;}
+
+
+.countcon span { font-size: 40px; }
+
+
+
+.addform {
+  margin: 10px auto;
+  height: auto;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  width: 90%;
+  overflow: hidden;
+  height: auto;
+  background-color: #19181a;
+  box-shadow: 0px 0px 2px aqua;
+  font-family: "Poppins";
+  padding: 10px;
+}
+
+.addform .span { margin-top: 10px;}
+.addform .buttons { display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 50px;
+ }
+
+
+.addform input {
+  margin: 0px auto;
+		width: 100%;
+		min-height: 60px;
+		background-color: hsla(222, 17%, 20%, 1);
+		padding: 10px 20px;
+		border: solid 2px  hsla(219, 11%, 30%, 1);
+		border-radius:  1rem;
+		transition: all 0.3s ease-in-out;
+		color:  hsla(0, 0%, 99%, 1);
+		font-family: 'Poppins';
+		font-size: 1.3rem;
+		z-index: 2;
+    margin-bottom: 10px;
+}
+
+.addform input:hover,
+.addform input:focus {
+			border-color:rgb(91, 196, 231);
+			outline: 0;
+		}
+
+    .addform input:focus {
+			box-shadow: 0 0 0 4px hsla(223, 72%, 54%, 0.3);
+		}
+	
+
+    .addform label {
+      display: block;
+      float: left;
+      color: hsla(222, 10%, 54%, 1);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      font-weight: 200;
+      transition: color  0.3s ease-in-out;
+    }
+
+    form { display: flex; flex-wrap: wrap; height: auto;
+      justify-content: center; position: relative; overflow: hidden;
+    align-items: center; margin-bottom: 100px;}
+
+    .form { display: flex; flex-wrap: wrap; overflow: hidden;
+    justify-content: center; position: relative;
+  align-items: center; margin-bottom: 100px;}
+    .form .div { margin: auto;
+    margin-left: 2px;
+  margin-right: 2px;
+padding: 10px;
+width: 45%; }
+
+.submit { 
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.button1{
+  background-color: red;
+  color: white;
+} 
+
+.button1 i { color: white}
+
+.button2 {border: 2px solid aqua; box-shadow: 0px 0px 10px aqua; background-color: black; color:white;}
+.button2  i {color:white}
+
+
+ .submit button:hover {border: 2px solid aqua; box-shadow: 0px 0px 10px aqua; background-color: black; color:white;}
+.submit button:hover i { color: white;}
+
+.ifopen { position: absolute;
+left: 0px;
+top:0px;
+height: 100%;
+width: 100%;
+z-index: 99999;
+background-color: rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(5px);}
+
+.ifopen .div { width: 40%; margin: 20px auto;}
+
+.ifopen .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: auto;
+}
+
+.circleImg { margin: auto;
+height: 150px;
+width: 150px;
+border:3px solid aqua;
+box-shadow: 0px 0px 10px aqua;
+overflow: hidden;
+margin-bottom: 40px;
+border-radius: 100%;}
+
+.circleImg img { margin-left: -45px; margin-top: -20px; height: 120%; width: 150%;}
 
 
   @media only screen and (max-width: 600px) {
@@ -787,9 +958,16 @@ i { color: black}
       font-weight: 300; margin-bottom: 35px;}
       .banter-loader { margin-top: 70px;}
     .h1 { font-size: 50px; margin-bottom: 50px; letter-spacing: 5px;}
-    .title {box-shadow: 0px 0px 10px aqua;
+    .title {box-shadow: 0px 0px 5px aqua;
       border: 2px solid aqua; }
 
-      .forImg {box-shadow: 0px 0px 10px aqua;
+      .forImg {box-shadow: 0px 0px 5px aqua;
         border: 2px solid aqua; }
+
+        .countcon { display: flex; flex-direction: column;}
+        .addform { width: 100%;}
+        .form .div { width: 100%;}
+        .addform input { margin-bottom: -5px;}
+        .submit { right:8px; bottom: 40px; }
+        .ifopen .div { width: 90%; margin: 20px auto;}
   }
