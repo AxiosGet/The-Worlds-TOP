@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/The-Worlds-TOP/static/css/main.41de02ac.css",
-    "main.js": "/The-Worlds-TOP/static/js/main.67aee7cf.js",
+    "main.css": "/The-Worlds-TOP/static/css/main.e0deac1f.css",
+    "main.js": "/The-Worlds-TOP/static/js/main.3fc3e0c3.js",
     "static/js/787.a8710408.chunk.js": "/The-Worlds-TOP/static/js/787.a8710408.chunk.js",
     "static/media/bgg.jpg": "/The-Worlds-TOP/static/media/bgg.877c7c613cefcf54dfeb.jpg",
+    "static/media/ME.jpg": "/The-Worlds-TOP/static/media/ME.fbe3cef2dd905c1248c7.jpg",
     "static/media/logo.svg": "/The-Worlds-TOP/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/The-Worlds-TOP/index.html",
-    "main.41de02ac.css.map": "/The-Worlds-TOP/static/css/main.41de02ac.css.map",
-    "main.67aee7cf.js.map": "/The-Worlds-TOP/static/js/main.67aee7cf.js.map",
+    "main.e0deac1f.css.map": "/The-Worlds-TOP/static/css/main.e0deac1f.css.map",
+    "main.3fc3e0c3.js.map": "/The-Worlds-TOP/static/js/main.3fc3e0c3.js.map",
     "787.a8710408.chunk.js.map": "/The-Worlds-TOP/static/js/787.a8710408.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41de02ac.css",
-    "static/js/main.67aee7cf.js"
+    "static/css/main.e0deac1f.css",
+    "static/js/main.3fc3e0c3.js"
   ]
 }
