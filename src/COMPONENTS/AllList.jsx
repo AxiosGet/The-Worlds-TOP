@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useScrollBy } from "react-use-window-scroll";
 import { useContext, Suspense } from "react";
@@ -8,6 +8,8 @@ import ReactPaginate from "react-paginate";
 import { AnimatePresence, motion } from "framer-motion";
 
 const AllList = (props) => {
+  const myRef = useRef();
+
   const [Flex, setFlex] = useState(true);
   const [Page, setPage] = useState(true);
   const [searching, setSearching] = useState(false);
@@ -51,7 +53,8 @@ const AllList = (props) => {
   const pageCount = Math.ceil(dataCount.length / usersPerPage);
 
   const changePage = ({ selected }) => {
-    window.location.href = "#id";
+    // window.location.href = "/#/id";
+    myRef.current.scrollIntoView();
     setPageNumber(selected);
   };
 
@@ -138,7 +141,7 @@ const AllList = (props) => {
               zIndex: "55",
             }}
           >
-            <span>{salary ? `$${data.SALARY}` : data.TITLE}</span>
+            <span>{salary ? data.SALARY : data.TITLE}</span>
           </div>
           <div
             className="desc"
@@ -182,7 +185,7 @@ const AllList = (props) => {
 
   return (
     <div>
-      <div id="id"></div>
+      <div ref={myRef} id="id"></div>
       <div className="sm">{sm}</div>
       <div className="h1">{heading}</div>
 
@@ -258,7 +261,7 @@ const AllList = (props) => {
                           <img src={data.IMAGE} />
                         </div>
                         <div className="title">
-                          <span>{salary ? `$${data.SALARY}` : data.TITLE}</span>
+                          <span>{salary ? data.SALARY : data.TITLE}</span>
                         </div>
                         <div
                           className="desc"
@@ -351,7 +354,15 @@ const AllList = (props) => {
             <br />
             <button
               className="button2"
-              onClick={() => (window.location.href = "/add")}
+              onClick={() =>
+                window.open("https://github.com/AxiosGet/The-Worlds-TOP")
+              }
+            >
+              GITHUB <i class="fa-brands fa-github"></i>
+            </button>
+            <button
+              className="button2"
+              onClick={() => (window.location.href = "/#/add")}
             >
               ADD DATA <i class="fa-solid fa-plus"></i>
             </button>

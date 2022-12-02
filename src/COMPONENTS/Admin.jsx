@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ME from "../ME.jpg";
+import { useNavigate } from "react-router-dom";
 import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 const Admin = () => {
+  const navigate = useNavigate();
+
   const COURSES =
     "https://script.googleusercontent.com/macros/echo?user_content_key=aAXr4l7EkA4WaifO3aNZs1XJY-y2o2oEKBcnI2AJaYq7O9vtcbEAGJtJkRn8W7T2ZwiV6iXQdylBMha96aZTYX9KuKkIbLJUOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa7PhnkVLCa_hukIbDoyMSFsSKj7JOo4IwzSVNv24TdjPvsGq6DHehugH3B1zc8mNfURE_MetAYBrgQ5IRBhqfbjzUZuNCXeoHwXIuFltvcj9bVKn3MpuO19m_4qgmdpvDQ&lib=M_c9ESy5svgJSzLc4nFE_wixfEmHMXltD";
   const JOBS =
@@ -104,6 +107,7 @@ const Admin = () => {
   });
 
   const sendData = (link) => {
+    setWhatype("button");
     if (link == JOBS) {
       setForSalary(false);
       setForLink(true);
@@ -139,16 +143,30 @@ const Admin = () => {
   useEffect(() => {
     if (user == "Password" && pass == "Username") {
       setIsDis(false);
+      setWhatype("submit");
     }
   }, [user, pass]);
+
+  const handleSub = (event) => {
+    if (event.keyCode === 13) {
+      //13 is the key code for Enter
+      event.preventDefault();
+      //Here you can even write the logic to select the value from the drop down or something.
+    }
+  };
+
+  const goBack = () => {
+    navigate(-1);
+  };
+
+  const [whaType, setWhatype] = useState("button");
 
   return (
     <>
       <div className="addflex">
         <div className="countflex">
           <div className="countcon">
-            <span>{loading ? "0" : countJob}</span>
-            JOBS
+            <span>{loading ? "0" : countJob}</span> JOBS
           </div>
           <div className="countcon">
             <span>{loading ? "0" : countCourse}</span> COURSES
@@ -158,7 +176,12 @@ const Admin = () => {
           </div>
         </div>
 
-        <form method="POST" action={sendTo} autoComplete="off">
+        <form
+          method="POST"
+          action={sendTo}
+          autoComplete="off"
+          onKeyDown={handleSub}
+        >
           <div className="addform">
             {ifopen && (
               <div className="ifopen">
@@ -191,7 +214,7 @@ const Admin = () => {
                         style={{ color: "white" }}
                       ></i>
                     </button>
-                    <button type="submit" disabled={isDis}>
+                    <button type={whaType} disabled={isDis} onClick={handleSub}>
                       SUBMIT <i className="fa-solid fa-paper-plane"></i>
                     </button>
                   </div>
@@ -202,6 +225,7 @@ const Admin = () => {
             <div className="buttons">
               {filters.map((filt, index) => (
                 <button
+                  type="button"
                   key={index}
                   className={isActive == filt.val ? "active" : ""}
                   onClick={() => sendData(filt.link)}
@@ -241,7 +265,7 @@ const Admin = () => {
 
             {btnbot && (
               <div className="submit">
-                <button className="button1" type="button">
+                <button className="button1" type="button" onClick={goBack}>
                   BACK <i className="fa-solid fa-xmark"></i>
                 </button>
                 <button onClick={handleClick} type="button">
