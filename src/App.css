@@ -953,6 +953,60 @@ border-radius: 100%;}
 
 .circleImg img { margin-left: -45px; margin-top: 0px; height: 100%; width: 150%;}
 
+.sol-icon { -webkit-animation: beat .25s infinite alternate;
+	-moz-animation: beat .25s infinite alternate;
+	-ms-animation: beat .25s infinite alternate;
+	-o-animation: beat .25s infinite alternate;
+	animation: beat .25s infinite alternate;
+
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	-o-transform-origin: center;
+	-ms-transform-origin: center;
+	transform-origin: center;}
+
+@keyframes beat{
+  to {
+     -webkit-transform: scale(1.4);
+      -moz-transform: scale(1.4);
+      -o-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+      transform: scale(1.4);
+  }
+ 
+ }
+ 
+ @-moz-keyframes beat {
+  to {
+    -moz-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+ 
+ }
+ 
+ @-webkit-keyframes beat{
+  to {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+ 
+ }
+ 
+ @-ms-keyframes beat {
+  to {
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+ 
+ }
+ 
+ @-o-keyframes beat {
+  to {
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+ 
+ } 
 
   @media only screen and (max-width: 600px) {
     .sm { margin-top: 30px; font-size: 18px;

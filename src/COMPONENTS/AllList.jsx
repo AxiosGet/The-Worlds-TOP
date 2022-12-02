@@ -325,7 +325,7 @@ const AllList = (props) => {
           )}
 
           <div className="footer">
-            Made with&nbsp;
+            Made with &nbsp;
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -345,7 +345,7 @@ const AllList = (props) => {
                 ></path>
               </g>
             </svg>
-            &nbsp;by &nbsp;
+            &nbsp; by &nbsp;
             <span className="sl-footer-links__marked-text">
               Bryan G | © 2022
             </span>
@@ -362,7 +362,10 @@ const AllList = (props) => {
             </button>
             <button
               className="button2"
-              onClick={() => (window.location.href = "/#/add")}
+              onClick={() =>
+                (window.location.href =
+                  "https://axiosget.github.io/The-Worlds-TOP/#/add")
+              }
             >
               ADD DATA <i class="fa-solid fa-plus"></i>
             </button>

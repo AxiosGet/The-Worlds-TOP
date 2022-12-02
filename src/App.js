@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AllList />} />
           <Route path="/add" element={<Admin />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </div>

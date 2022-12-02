@@ -278,7 +278,7 @@ const Admin = () => {
       </div>
 
       <div className="footer">
-        Made with&nbsp;
+        Made with &nbsp;
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -298,9 +298,8 @@ const Admin = () => {
             ></path>
           </g>
         </svg>
-        &nbsp;by &nbsp;
-        <span className="sl-footer-links__marked-text">Bryan G </span>
-        | © 2022
+        &nbsp; by &nbsp;
+        <span className="sl-footer-links__marked-text">Bryan G | © 2022</span>
         <br />
         Invest in your future.
       </div>
