@@ -141,9 +141,12 @@ const Admin = () => {
   const [pass, setPass] = useState("");
 
   useEffect(() => {
-    if (user == "Password" && pass == "Username") {
+    if (pass == "Username") {
       setIsDis(false);
       setWhatype("submit");
+    } else {
+      setIsDis(true);
+      setWhatype("button");
     }
   }, [user, pass]);
 
@@ -188,12 +191,6 @@ const Admin = () => {
                 <div className="center">
                   <div className="circleImg">
                     <img src={ME} />
-                  </div>
-                  <div className="div">
-                    <input
-                      placeholder="Username"
-                      onChange={(e) => setUser(e.target.value)}
-                    />
                   </div>
                   <div className="div">
                     <input
