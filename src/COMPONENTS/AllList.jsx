@@ -362,10 +362,11 @@ const AllList = (props) => {
             </button>
             <button
               className="button2"
-              onClick={() =>
+              onClick={() => (
                 (window.location.href =
-                  "https://axiosget.github.io/The-Worlds-TOP/#/add")
-              }
+                  "https://axiosget.github.io/The-Worlds-TOP/#/add"),
+                myRef.current.scrollIntoView()
+              )}
             >
               ADD DATA <i class="fa-solid fa-plus"></i>
             </button>
