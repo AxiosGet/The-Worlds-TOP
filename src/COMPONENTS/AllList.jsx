@@ -176,7 +176,7 @@ const AllList = (props) => {
                     }, 1000)
               }
             >
-              <i className="fa-solid fa-paper-plane"></i>
+              <i class="fa-solid fa-circle-info"></i> Details
             </div>
           )}
         </motion.div>
@@ -300,7 +300,7 @@ const AllList = (props) => {
                                   }, 1000)
                             }
                           >
-                            <i className="fa-solid fa-paper-plane"></i>
+                            <i class="fa-solid fa-circle-info"></i> Details
                           </div>
                         )}
                       </motion.div>
