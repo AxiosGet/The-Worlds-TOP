@@ -5,11 +5,14 @@ import AllList from "./COMPONENTS/AllList";
 import { Routes, Route } from "react-router-dom";
 import Admin from "./COMPONENTS/Admin";
 import Error from "./COMPONENTS/Error";
+import BG from "./a.jpg";
 
 function App() {
   return (
     <div>
-      <div className="back"></div>
+      <div className="back">
+        <img src={BG} />
+      </div>
       <div className="App">
         <Routes>
           <Route path="/" element={<AllList />} />

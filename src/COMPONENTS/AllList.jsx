@@ -49,7 +49,7 @@ const AllList = (props) => {
   const usersPerPage = 8;
   const pagesVisited = pageNumber * usersPerPage;
 
-  const dataCount = datas.filter((data) => !(data.TITLE.length === 0));
+  const dataCount = datas.filter((data) => !(data.TITLE?.length === 0));
   const pageCount = Math.ceil(dataCount.length / usersPerPage);
 
   const changePage = ({ selected }) => {
@@ -176,7 +176,7 @@ const AllList = (props) => {
                     }, 1000)
               }
             >
-              <i class="fa-solid fa-circle-info"></i> Details
+              <i className="fa-solid fa-circle-info"></i> Details
             </div>
           )}
         </motion.div>
@@ -300,7 +300,7 @@ const AllList = (props) => {
                                   }, 1000)
                             }
                           >
-                            <i class="fa-solid fa-circle-info"></i> Details
+                            <i className="fa-solid fa-circle-info"></i> Details
                           </div>
                         )}
                       </motion.div>
@@ -358,7 +358,7 @@ const AllList = (props) => {
                 window.open("https://github.com/AxiosGet/The-Worlds-TOP")
               }
             >
-              GITHUB <i class="fa-brands fa-github"></i>
+              GITHUB <i className="fa-brands fa-github"></i>
             </button>
             <button
               className="button2"
@@ -368,7 +368,7 @@ const AllList = (props) => {
                 myRef.current.scrollIntoView()
               )}
             >
-              ADD DATA <i class="fa-solid fa-plus"></i>
+              ADD DATA <i className="fa-solid fa-plus"></i>
             </button>
           </div>
         </>
