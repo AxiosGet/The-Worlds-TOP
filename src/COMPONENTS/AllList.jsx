@@ -364,7 +364,7 @@ const AllList = (props) => {
               className="button2"
               onClick={() => (
                 (window.location.href =
-                  "https://axiosget.github.io/The-Worlds-TOP/#/add"),
+                  "https://gbryan-dev.github.io/The-Worlds-TOP/#/add"),
                 myRef.current.scrollIntoView()
               )}
             >
