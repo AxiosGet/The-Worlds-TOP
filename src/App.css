@@ -172,7 +172,7 @@ background-color: #111111;}
   border-radius: 10px; border: 2px solid transparent;
 font-size: 15px; padding: 5px 10px; background-color:white; color: black;}
 
-.visit i { color: #07A39D; font-size: 15px;}
+.visit i { color: black; font-size: 15px; }
 
 .visit:hover {border: 2px solid aqua; box-shadow: 0px 0px 10px aqua; background-color: black; color:white;}
 .visit:hover i { color: white;}
